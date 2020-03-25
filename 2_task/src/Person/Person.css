@@ -1,0 +1,16 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: burlywood;
+    text-align: center;
+    
+}
+
+.card {
+    background-color: rgba(03, 03, 03, 0.3);
+    width: 40%;
+    padding: 2rem;
+    border-radius: 5px;
+    color: white;
+  
+
+}
