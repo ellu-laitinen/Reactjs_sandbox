@@ -35,14 +35,14 @@ class App extends Component {
   render () {
     return (
       <div className="container">
-        <Header></Header>
+        <Header/>
         <div className="likesContainer">
       <h2 className={this.state.likes== 0 ? "likes" : this.state.likes % 2 === 0 ? "likes even" : "likes odd"}>Total likes: {this.state.likes}</h2>
       <button onClick={this.addLikes}>Add likes</button>
       <button onClick={this.removeLikes}>Remove likes</button>
       <button onClick ={this.resetLikes}>Reset likes</button>
       </div>
-      <Footer></Footer>
+      <Footer/>
       </div>
      
     );
