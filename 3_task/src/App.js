@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 class App extends Component {
 
@@ -21,15 +23,26 @@ class App extends Component {
     this.setState(
       {likes:this.state.likes =0})};
 
+
+  getDate() {
+        const date = { currentTime: new Date().toLocaleString()};
+        this.getDate({
+            date: date
+        });
+    }
+  
+
   render () {
     return (
-      <div>
-        <h1>Third task - likes calculator</h1>
-      <h2>Total likes:{this.state.likes}</h2>
+      <div className="container">
+        <Header></Header>
+        <div className="likesContainer">
+      <h2 className={this.state.likes== 0 ? "likes" : this.state.likes % 2 === 0 ? "likes even" : "likes odd"}>Total likes: {this.state.likes}</h2>
       <button onClick={this.addLikes}>Add likes</button>
       <button onClick={this.removeLikes}>Remove likes</button>
       <button onClick ={this.resetLikes}>Reset likes</button>
-      <p> Today is {this.state.date.toLocaleDateString()}</p>
+      </div>
+      <Footer></Footer>
       </div>
      
     );
