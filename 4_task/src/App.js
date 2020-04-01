@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Form onChange={this.changeHandler}></Form>
+        <Form changeHandler={this.changeHandler}></Form>
       <View firstname={this.state.firstname} lastname={this.state.lastname} phone={this.state.phone} message={this.state.message}></View>
   
 </div>
