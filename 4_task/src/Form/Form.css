@@ -1,16 +1,25 @@
 form {
  margin: 2rem;
+ display: grid;
+ grid-template-columns: repeat(6, 1fr);
+
+ 
 }
 
 input, textarea {
     border-radius: 3px;
     border: 1px solid black;
     padding: 5px;
-    width: 20rem;
-    display: table;
+    margin: 1rem;
+    display:grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+ 
 }
 label {
-  
-    
-    
+    display: grid;
+grid-column-start: 1; 
+grid-column-end: 2;
+margin: 1rem;    
 }
