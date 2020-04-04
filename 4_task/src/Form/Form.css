@@ -2,7 +2,6 @@ form {
  margin: 2rem;
  display: grid;
  grid-template-columns: repeat(6, 1fr);
-
  
 }
 
@@ -14,9 +13,9 @@ input, textarea {
     display:grid;
     grid-column-start: 2;
     grid-column-end: 4;
-
- 
 }
+
+
 label {
     display: grid;
 grid-column-start: 1; 
