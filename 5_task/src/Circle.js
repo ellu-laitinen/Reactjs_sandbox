@@ -1,19 +1,11 @@
 import React from 'react';
 import './Circle.css';
 
-const Circle = ({clickHandler}) => {
+const Circle = props => {
   return (
-
-<div>
-
-<div className="circle-container">
-      <div className ="circle" onClick={clickHandler}></div>
-      <div className ="circle"onClick={clickHandler}></div>
-      <div className ="circle"onClick={clickHandler}></div>
-      <div className ="circle"onClick={clickHandler}></div>
-
-    </div>
-    </div>
+  <div className="circle-container">
+      <div className ="circle" onClick={props.click}></div>
+  </div>
     );
 
   } ;
