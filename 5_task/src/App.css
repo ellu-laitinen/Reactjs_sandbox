@@ -8,9 +8,10 @@ body {
 }
 
 .button {
-  background: lightcyan;
+  background: rgb(151, 100, 199);
   margin: 1rem;
   border-radius: 3px;
   padding: 5px;
-  border: 1px solid grey;
+  border: 1px solid black;
+  box-shadow: none;
 }

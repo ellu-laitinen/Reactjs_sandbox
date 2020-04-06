@@ -5,7 +5,13 @@ import Circle from'./Circle.js';
 class App extends Component {
   state = {
     score: 0
+  };
 
+  clickHandler = () => {
+    this.setState (
+      {score:this.state.score +1},
+    
+      )
   };
 
 
@@ -14,8 +20,8 @@ render() {
   return (
     <div>
     <h1>Speed Game</h1>
-    <p>Current score: </p>
-    <Circle></Circle>
+    <p>Current score: {this.state.score}</p>
+    <Circle clickHandler={this.clickHandler}></Circle>
     <button className="button">Start Game</button>
     <button className="button">Stop Game</button>
 
@@ -23,5 +29,5 @@ render() {
     </div>
   );
 }
-};
+}
 export default App;
