@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import Circle from'./Circle.js';
+import Circle from'./Circle/Circle.js';
+import GameOver from './GameOver/GameOver.js';
 
 const getInteger = (min, max) => {
  return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -9,7 +10,8 @@ const getInteger = (min, max) => {
 class App extends Component {
   state = {
     score: 0,
-    current: 0
+    current: 0,
+    showGameOver: false
   };
 
   pace = 1000;
@@ -44,7 +46,10 @@ class App extends Component {
 
   endHandler = () => {
     clearTimeout(this.timer);
-  }
+    this.setState (
+      {showGameOver: true}
+    )
+  };
 
 render() {
   return (
@@ -59,6 +64,7 @@ render() {
     <button onClick={this.startHandler} className="button">Start Game</button>
     <button onClick={this.endHandler} className="button">Stop Game</button>
 </div>
+<GameOver></GameOver>
     
     </div>
   );
