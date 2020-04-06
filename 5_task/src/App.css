@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+body {
+ background: rgb(51,77,214);
+  background: linear-gradient(90deg, rgba(51,77,214,0.8672329215116279) 0%, rgba(9,60,209,1) 64%, rgba(1,0,120,0.8352561773255813) 100%);;
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+}
+
+.button {
+  background: lightcyan;
+  margin: 1rem;
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid grey;
+}

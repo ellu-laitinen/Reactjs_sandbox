@@ -1,0 +1,15 @@
+.circle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: hotpink;
+    margin: 1rem;
+   
+  
+  }
