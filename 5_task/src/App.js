@@ -20,8 +20,9 @@ class App extends Component {
 
   next = () => {
 
-    if (this.state.rounds >= 100) {
+    if (this.state.rounds >= 5) {
       this.endHandler();
+      return;
 
     }
 
@@ -43,12 +44,17 @@ class App extends Component {
 };
 
   clickHandler = (circleID) => { 
+
+    let audio1 = new Audio("slap.mp3"); 
     console.log('Clicked ', circleID);
 
     if(this.state.current !== circleID) {
     this.endHandler();
     return;
     }
+
+    audio1.play(); 
+  
   
     this.setState ({
       score:this.state.score +1,
@@ -62,11 +68,16 @@ class App extends Component {
   };
 
   endHandler = () => {
+
+    let audio2 = new Audio("applause4.mp3"); 
+    let audio3 = new Audio('cheer.mp3');
     clearTimeout(this.timer);
 
     this.setState ({ 
       showGameOver: true
     });
+    audio2.play();
+    audio3.play();
   };
 
 render() {

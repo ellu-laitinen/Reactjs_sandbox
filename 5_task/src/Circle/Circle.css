@@ -4,6 +4,13 @@
     display: inline-block;
     
   }
+
+  .circle:hover {
+    cursor: url('poop3.png'), auto;
+    background: none;
+  }
+
+
   
   .circle {
     width: 200px;
@@ -15,5 +22,5 @@
   }
 
   .circle.active {
-    background: url('https://source.unsplash.com/3ym-ev0Pe58') no-repeat center center/cover;
+    background: url('trump.png') no-repeat center center/cover;
   }
