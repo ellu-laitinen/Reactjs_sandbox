@@ -15,8 +15,5 @@
   }
 
   .circle.active {
-    background: url('https://source.unsplash.com/k2U2SlK6tbM');
-    background-size:cover;
-     background-position: center center;
-     background-repeat: no-repeat;
+    background: url('https://source.unsplash.com/3ym-ev0Pe58') no-repeat center center/cover;
   }

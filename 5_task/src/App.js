@@ -11,13 +11,20 @@ class App extends Component {
   state = {
     score: 0,
     current: 0,
-    showGameOver: false
+    showGameOver: false,
+    rounds: 0
   };
 
   pace = 1000;
   timer = undefined;
 
   next = () => {
+
+    if (this.state.rounds >= 100) {
+      this.endHandler();
+
+    }
+
     let nextActive = undefined;
 
     do {
@@ -26,8 +33,10 @@ class App extends Component {
 
     this.setState(
       {current: nextActive,
+        rounds: this.state.rounds +1,
     });
 
+    this.pace *= 0.95;
     this.timer =setTimeout(this.next, this.pace);
     console.log(this.state.current);
 
@@ -35,9 +44,17 @@ class App extends Component {
 
   clickHandler = (circleID) => { 
     console.log('Clicked ', circleID);
-    this.setState (
-      {score:this.state.score +1}
-      );
+
+    if(this.state.current !== circleID) {
+    this.endHandler();
+    return;
+    }
+  
+    this.setState ({
+      score:this.state.score +1,
+        rounds: 0,
+      
+      });
   };
 
   startHandler = () => {
@@ -46,9 +63,10 @@ class App extends Component {
 
   endHandler = () => {
     clearTimeout(this.timer);
-    this.setState (
-      {showGameOver: true}
-    )
+
+    this.setState ({ 
+      showGameOver: true
+    });
   };
 
 render() {
@@ -64,7 +82,7 @@ render() {
     <button onClick={this.startHandler} className="button">Start Game</button>
     <button onClick={this.endHandler} className="button">Stop Game</button>
 </div>
-<GameOver></GameOver>
+{this.state.showGameOver && <GameOver score={this.state.score}></GameOver>}
     
     </div>
   );
