@@ -3,13 +3,12 @@ import './Post.css';
 
 const Post = props => {   
         return (  
-            <div className="card">
+            <div onClick={props.click} className="card">
                 <img src={props.img} alt={props.title}/>
                 <h2>{props.title}</h2>
                 <p>{props.author}</p>
-                <p>{props.desc}</p>
-                
-            </div>
+                <p>{props.desc}</p> 
+                </div>
         
         );
     }
