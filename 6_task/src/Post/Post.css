@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(140, 134, 223);
+}
+
+.card-container {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+    
+   
+}
+
+.card {
+    margin: 2rem; 
+    background: rgba(28, 55, 177, 0.6);
+    padding: 2rem;
+    box-shadow: 0 0 5px black;
+    border: 1px solid black;
+    border-radius: 3px;  
+    min-width: 10rem;
+}
+
+img {
+    width: 100%;
+    
+}
