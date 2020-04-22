@@ -33,7 +33,14 @@ const posts = [
 
 class App extends Component {
   state = {
-    posts: posts
+    posts: posts,
+    likes: 0
+  };
+
+  addLikes = () => {
+    this.setState({
+      likes:this.state.likes +1
+    })
   };
 
   removeHandler = removeId => {
@@ -46,13 +53,16 @@ class App extends Component {
     const postsList = this.state.posts.map((post, index) => {
      
       return (
+     
         <Post 
         key={post.id}
         title={post.title} 
         author={post.author} 
         desc={post.desc} 
         img={post.img}
-        click={this.removeHandler.bind(this, index)}/>
+        closeclick={this.removeHandler.bind(this, index)}
+        /* likeclick={this.addLikes}
+        likes={this.state.likes} *//>      
       )
     });
 
