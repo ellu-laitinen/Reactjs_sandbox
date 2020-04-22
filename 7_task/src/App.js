@@ -2,28 +2,34 @@
 import React, { useState } from 'react';
 import './App.css'
 import Button from './Button/Button.js'
+import Content from './Content/Content.js'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faHeart, faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 
 
 
-const App = () => {
-  const [counter, setCounter] = useState(0)
-  const addHandler = () => setCounter(counter +1)
-  const addSecondHandler = () => setCounter(counter +1)
-  const resetHandler = () => setCounter(0)
+const Likes = () => {
+  const [yesCounter, setYesCounter] = useState(0)
+  const [noCounter, setNoCounter] = useState(0)
+  const addHandler = () => setYesCounter(yesCounter +1)
+  const addSecondHandler = () => setNoCounter(noCounter +1)
+  const resetHandler = () => {
+    setYesCounter(0); 
+    setNoCounter(0)}
+
 
   return (
    <div> 
+     <h1>Do this or that?</h1>
       <div>
-      <Button click={addHandler} text="Alrighty then" ></Button>
-      <Button click={addSecondHandler} text="I think not"></Button>
-      <Button click={resetHandler}text ="I'm too confused now.  Reset my thoughts!"></Button>
+      <Button click={addHandler} text="Alrighty then"><FontAwesomeIcon icon={faHeart} className="icon"/></Button>
+      <Button click={addSecondHandler} text="Bad idea"><FontAwesomeIcon icon={faTimesCircle} className="icon"/></Button>
+      <Button click={resetHandler}text ="I'm too confused now. Reset my thoughts!"></Button>
       </div>
-      <h1>Thoughts, yes or no</h1>
-      <p>Alright: {counter}</p>
-      <p>Nope: {counter}</p>
+ <Content yesCounter={yesCounter} noCounter={noCounter}></Content>
       </div>
   );
 }
 
-export default App;
+export default Likes;
 
