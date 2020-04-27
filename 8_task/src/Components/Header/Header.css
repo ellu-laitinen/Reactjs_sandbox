@@ -1,0 +1,29 @@
+
+.nav {
+    background: rgba(85, 3, 192, 0.7);   
+    color: white; 
+}
+
+
+h2 {
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;  
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links {
+    text-decoration: none; 
+    color: white;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    display: flex;  
+    align-content: center;
+}
