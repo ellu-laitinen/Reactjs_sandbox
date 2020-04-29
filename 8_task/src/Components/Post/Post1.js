@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom';
 
 
-const Post = () => {
+const Post1 = () => {
     return (
         
      <div className="about">
@@ -20,4 +20,4 @@ const Post = () => {
 
 
 
-export default Post;
+export default Post1;

@@ -1,6 +1,8 @@
 import React from 'react';
-import './App.css'
+/* import './App.css' */
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom';
+import Container from 'react-bootstrap/Container'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './Components/Header/Header.js';
 import Home from './Components/Home/Home.js';
@@ -18,6 +20,7 @@ import Blog from './Components/Blog/Blog.js';
 }; */
 const App = () => {
     return (
+        <Container fluid>
         <Router>
           <Header />
         <main>
@@ -28,6 +31,7 @@ const App = () => {
             </Switch>
         </main>
         </Router>
+        </Container>
     );
 };
 
