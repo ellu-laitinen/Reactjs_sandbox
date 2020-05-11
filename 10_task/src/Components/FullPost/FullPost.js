@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./FullPost.css";
 import axios from 'axios';
+
+//npm json-server --port 3001 --watch db.json
+
+
 const FullPost = () => {
   const [loadedPost, setLoadedpost] = useState();
   let { postId } = useParams();
@@ -14,6 +18,7 @@ const FullPost = () => {
         });
     }
   });
+
   let postData = undefined;
   if (postId) {
     postData = <h1>Loading post</h1>

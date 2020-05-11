@@ -1,35 +1,40 @@
-import React from 'react';
-import {Link, useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 
-import posts from "../../postdata"
 
 
 const Post = () => {
+    const [loadedPost, setLoadedpost] = useState();
     let { postId } = useParams();
-    let post = posts.find((p) =>  p.title === postId)
+    useEffect(() => {
+        if (!loadedPost) {
+            axios.get('http://localhost:3001/posts/' + postId).then(
+                (response) => {
+                    console.log(response.data);
+                    setLoadedpost(response.data);
+                });
+        }
+    });
 
-    return (
-        <Jumbotron className="bg-transparent jumbotron-fluid p-0">
-        <Container fluid={true}>
-            <Row className="justify-content-center py-5">
-     <Card>
-        <Card.Body>
-            <Card.Img src={post.img} alt={post.title} style={{width: 500 }}/> 
-    <Card.Title>{post.title}</Card.Title>
-    <Card.Text>{post.desc}</Card.Text>
-        <Link to="/blog">Back to Blog page</Link>
-  
-       </Card.Body>
-       </Card>
-       </Row>
-       </Container>
-       </Jumbotron>
-        
-    );
-}
+    let postData = undefined;
+    if (postId) {
+        postData = <h1>Loading post</h1>;
+    }
+    if (loadedPost) {
+        postData = (
+            <div className="fullPost">
+                <h1>Post {loadedPost.id}</h1>
+                <p>{loadedPost.title}</p>
+                <img src={loadedPost.img} alt={loadedPost.title} />
+            </div>
 
+        );
+    }
+    return postData;
+
+};
 export default Post;

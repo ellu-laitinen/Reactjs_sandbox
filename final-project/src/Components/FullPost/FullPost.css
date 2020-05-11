@@ -1,0 +1,13 @@
+.image {
+    max-width: 600px;
+}
+
+.button-fp {
+    margin: 2rem auto;
+    background: greenyellow;
+    color: black;
+}
+
+.button-fp:hover {
+    background: rgb(114, 170, 29);
+}
