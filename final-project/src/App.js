@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from './Components/Header/Header'
-/* import Navigation from "./Components/Navigation/Navigation"; */
 import Home from "./Components/Home/Home";
 import Blog from "./Components/Blog/Blog";
 import NewPost from "./Components/NewPost/NewPost";

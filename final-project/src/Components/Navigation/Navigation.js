@@ -1,24 +1,25 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import './Navigation.css'
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Navigation = () => {
     return (
         <Nav className="justify-content-end" style={{ width: "85%" }}>
             <Nav.Item>
-                <Nav.Link href="/" exact style={{ color: "white" }}>
-                    Home
-                    </Nav.Link>
+                <LinkContainer className="nav-link" to="/" exact style={{ color: "white" }}>
+                    <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/blog" style={{ color: "white" }}>
-                    Blog
-                    </Nav.Link>
+                <LinkContainer to="/blog" style={{ color: "white" }}>
+                    <Nav.Link> Blog</Nav.Link>
+                </LinkContainer>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/newpost" style={{ color: "white" }}>
-                    New post
-                    </Nav.Link>
+                <LinkContainer to="/newpost" style={{ color: "white" }}>
+                    <Nav.Link>New post</Nav.Link>
+                </LinkContainer>
             </Nav.Item>
         </Nav>
     );

@@ -4,6 +4,10 @@
     background: #eee;
     padding: 1rem;
     display: inline-block;
+    position: relative;
+    background: rgb(144, 155, 250);
+    box-shadow: 0 0 3px black;
+    border: 0.5px black solid;
   }
   
 .postCard img {
@@ -11,22 +15,49 @@
   }
 
 .btn-remove{
-    color: rgb(255, 255, 255);
-    margin: 1rem auto;
-    background: rgb(248, 122, 248);
+    color: rgb(146, 13, 13);
+  position: absolute;
     border: none;
+    right: 10px;
+    bottom: 0;
 }
 
 .btn-remove:hover {
-  background: rgb(192, 31, 79);
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(54, 1, 1);
 }
 
 .btn-link {
   color: black;
-  background: rgb(113, 189, 0);
-  margin-right: 1rem;
+  background: rgb(211, 123, 252);
+  margin-bottom: 1rem;
+  border: 1px rgb(38, 1, 97) solid;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 .btn-link:hover {
   color: rgb(255, 255, 255);
+  background: rgb(38, 1, 97);
+}
+
+.like-btn {
+  border-radius: 3px;
+  background: rgba(250, 180, 192, 0.979);
+  border: 1px hotpink solid;
+  margin-top: 1rem;
+}
+
+.like-btn:hover {
+  color: white;
+  background: hotpink;
+}
+
+.icon-heart {
+  color: red;
+}
+
+.icon-heart:hover {
+  color: rgb(37, 12, 37);
 }

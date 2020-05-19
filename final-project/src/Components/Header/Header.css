@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+.music-icon {
+    color: white;
+    margin-right: 10px;
+}
+
+.navbar {
+    background: rgba(42, 0, 230, 0.719);
+}
+
+body {
+    font-family: 'Pangolin', cursive;
+    background: rgba(176, 176, 247, 0.63);
+}

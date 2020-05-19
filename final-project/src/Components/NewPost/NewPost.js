@@ -36,22 +36,22 @@ const NewPost = () => {
                 <Form >
 
                     <Form.Label htmlFor="title">Title</Form.Label>
-                    <Form.Control type="text" name="title" id="title"
+                    <Form.Control type="text" name="title" id="title" className="input"
                         onChange={changeValueHandler} />
 
                     <Form.Label htmlFor="shortDesc">Short description</Form.Label>
-                    <Form.Control as="textarea" type="text" name="shortDesc" id="shortDesc"
+                    <Form.Control as="textarea" rows="1" type="text" name="shortDesc" id="shortDesc" className="input"
                         onChange={changeValueHandler} />
 
                     <Form.Label htmlFor="desc">Description</Form.Label>
-                    <Form.Control as="textarea" type="text" name="desc" id="desc"
+                    <Form.Control as="textarea" rows="8" type="text" name="desc" id="desc" className="input"
                         onChange={changeValueHandler} />
 
                     <Form.Label htmlFor="img">Image URL</Form.Label>
-                    <Form.Control type="text" name="img" id="img"
+                    <Form.Control type="text" name="img" id="img" className="input"
                         onChange={changeValueHandler} />
 
-                    <Button className="btn-np" variant="dark" type="submit" onClick={addPostHandler}>Add new post</Button>
+                    <Button className="btn-np" variant="dark" type="submit" /* onClick={addPostHandler} */>Add new post</Button>
                 </Form>
             </Container>
         </>
