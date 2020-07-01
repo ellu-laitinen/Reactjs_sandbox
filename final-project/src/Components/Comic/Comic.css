@@ -1,0 +1,26 @@
+.comic {
+    width: 600px;
+    margin: 8px;
+    border: 2px solid black;
+}
+
+
+/* .error2 {
+    width: 40vw;
+} */
+
+.comictitle {
+    text-align: center;
+}
+
+@media screen and (max-width: 823px) {
+    .comic {
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 414px) {
+    .comic, .comictitle {
+        width: 100%;
+    }
+}
