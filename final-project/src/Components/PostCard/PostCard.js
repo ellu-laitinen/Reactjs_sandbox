@@ -24,7 +24,7 @@ const PostCard = ({ title, img, desc, shortDesc, link, remove }) => {
                 <Card.Text>{desc}</Card.Text>
                 <div className="buttons">
                     <Link to={link} variant="link" className="btn-link">Read more...</Link>
-                    <p className="btn-remove" onClick={remove}>Remove</p>
+                    {/*   <p className="btn-remove" onClick={remove}>Remove</p> */}
                     <LikeButton click={addHandler} text="Like" counter={counter}>
                     </LikeButton>
                 </div>

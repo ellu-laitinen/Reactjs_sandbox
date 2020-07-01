@@ -5,6 +5,7 @@ import Header from './Components/Header/Header'
 import Home from "./Components/Home/Home";
 import Blog from "./Components/Blog/Blog";
 import NewPost from "./Components/NewPost/NewPost";
+import Comic from "./Components/Comic/Comic"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/blog" component={Blog} />
           <Route path="/newpost" component={NewPost} />
+          <Route path="/comic" component={Comic} />
         </Switch>
       </div>
     </Router>

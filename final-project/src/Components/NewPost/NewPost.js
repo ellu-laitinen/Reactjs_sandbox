@@ -51,7 +51,7 @@ const NewPost = () => {
                     <Form.Control type="text" name="img" id="img" className="input"
                         onChange={changeValueHandler} />
 
-                    <Button className="btn-np" variant="dark" type="submit" /* onClick={addPostHandler} */>Add new post</Button>
+                    <Button className="btn-np" variant="dark" type="submit" onClick={addPostHandler}>Add new post</Button>
                 </Form>
             </Container>
         </>

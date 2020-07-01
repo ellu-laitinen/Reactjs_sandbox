@@ -12,29 +12,29 @@ import FullPost from "../FullPost/FullPost";
 import Container from 'react-bootstrap/Container'
 
 const Blog = () => {
-    /*  const [post, setPost] = useState([]); */
+    /* const [post, setPost] = useState([]);*/
     let match = useRouteMatch();
     const post = posts;
 
-    /*    useEffect(() => {
-           axios.get("http://localhost:3001/posts").then((response) => {
-               const posts = response.data.slice(0, 10)
-               setPost(posts);
-               console.log(posts)
-           });
-       }, []) */
+    /*   useEffect(() => {
+          axios.get("http://localhost:3001/posts").then((response) => {
+              const posts = response.data.slice(0, 10)
+              setPost(posts);
+              console.log(posts)
+          });
+      }, []) */
 
-    /*    const removeHandler = (id) => {
-           console.log(id)
-   
-           axios.delete("http://localhost:3001/posts/" + id)
-               .then(() => {
-                   return axios.get("http://localhost:3001/posts/")
-               })
-               .then(response => {
-                   setPost(response.data)
-               })
-       } */
+    /*   const removeHandler = (id) => {
+          console.log(id)
+  
+          axios.delete("http://localhost:3001/posts/" + id)
+              .then(() => {
+                  return axios.get("http://localhost:3001/posts/")
+              })
+              .then(response => {
+                  setPost(response.data)
+              })
+      } */
 
     const PostList = post.map((p) => {
         return (
@@ -45,7 +45,7 @@ const Blog = () => {
                 shortDesc={p.shortDesc}
                 img={p.img}
                 link={`${match.url}/${p.id}`}
-            /* remove={() => removeHandler(p.id)} */
+            /*  remove={() => removeHandler(p.id)} */
 
             />
         );

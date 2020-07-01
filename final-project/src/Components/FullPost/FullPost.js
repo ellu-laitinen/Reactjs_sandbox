@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./FullPost.css";
-/* import axios from 'axios';*/
+import axios from 'axios';
 
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
-import Image from 'react-bootstrap/Image' 
+import Image from 'react-bootstrap/Image'
 import posts from '../../postdata'
 
 
 const FullPost = () => {
-    /* const [loadedPost, setLoadedpost] = useState(); */
+    /*  const [loadedPost, setLoadedpost] = useState(); */
     let { postId } = useParams();
 
-    
-  const post =  posts.find((p) => p.id == postId);
+
+    const loadedPost = posts.find((p) => p.id == postId);
 
 
-    return /* postData */ (
 
-        <Container>
+
+    /*     <Container>
                     <Col className="fullPost">
                         <h1>Post {post.id}</h1>
                         <p>{post.title}</p>
@@ -32,11 +32,11 @@ const FullPost = () => {
                         <Link to="/blog"> Back to blog</Link>
                     </Button>
                 </Container>
+ */
 
-    
-    );
-};
-export default FullPost;
+
+
+
 
     /*     useEffect(() => {
             if (!loadedPost) {
@@ -47,28 +47,32 @@ export default FullPost;
                     });
             }
         }); */
-    /* 
-        let postData = undefined;
-        if (postId) {
-            postData = <h1>Loading post</h1>
-        }
-        if (loadedPost) {
-            postData = (
-    
-                <Container>
-                    <Col className="fullPost">
-                        <h1>Post {loadedPost.id}</h1>
-                        <p>{loadedPost.title}</p>
-                        <p>{loadedPost.desc}</p>
-                        <Image className="post-image" src={loadedPost.img} alt={loadedPost.title} fluid />
-                    </Col>
-                    <Button className="button-fp" variant="primary" size="smd">
-                        <Link to="/blog"> Back to blog</Link>
-                    </Button>
-                </Container>
-    
-            );
-        } */
+
+    let postData = undefined;
+    if (postId) {
+        postData = <h1>Loading post</h1>
+    }
+    if (loadedPost) {
+        postData = (
+
+            <Container>
+                <Col className="fullPost">
+                    <h1>Post {loadedPost.id}</h1>
+                    <p>{loadedPost.title}</p>
+                    <p>{loadedPost.desc}</p>
+                    <Image className="post-image" src={loadedPost.img} alt={loadedPost.title} fluid />
+                </Col>
+                <Button className="button-fp" variant="primary" size="smd">
+                    <Link to="/blog"> Back to blog</Link>
+                </Button>
+            </Container>
+
+        );
+    }
+    return postData
+
+};
+export default FullPost;
 
 
 /*         <div>
@@ -79,3 +83,4 @@ export default FullPost;
 
 
     </div> */
+

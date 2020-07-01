@@ -21,6 +21,11 @@ const Navigation = () => {
                     <Nav.Link>New post</Nav.Link>
                 </LinkContainer>
             </Nav.Item>
+            <Nav.Item>
+                <LinkContainer to="/comic" style={{ color: "white" }}>
+                    <Nav.Link>Comic</Nav.Link>
+                </LinkContainer>
+            </Nav.Item>
         </Nav>
     );
 };
